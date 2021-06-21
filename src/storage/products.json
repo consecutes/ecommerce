@@ -1,0 +1,156 @@
+{
+	"shirts": [
+		{
+			"name": "Rick and Morty",
+			"image": "/public/img/products/shirts/rym.jpg",
+			"price": 35,
+			"discount": "-0%",
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock": 5
+		},
+		{
+			"name": "Game of Thrones",
+			"image": "/public/img/products/shirts/got.jpg",
+			"price": 90,
+			"discount": "-50%",
+			"type": "T-shirt",
+			"stock": 1
+		},
+		{
+			"name":"Breaking Bad",
+			"image":"/public/img/products/shirts/bb.jpg",
+			"price":10,
+			"discount": "-0%",
+			"type": "T-shirt",
+			"stock":10
+		},
+		{
+			"name":"Chavez",
+			"image":"/public/img/products/shirts/chavez.jpg",
+			"price":1,
+			"discount": "-99%",
+			"type": "T-shirt",
+			"stock":0
+		},
+		{
+			"name":"UDN",
+			"image":"/public/img/products/shirts/edn.jpeg",
+			"price":50,
+			"discount": "-0%",
+			"type": "T-shirt",
+			"stock":0
+		},
+		{
+			"name":"Facefuck",
+			"image":"/public/img/products/shirts/facefuck.png",
+			"price":1,
+			"discount": "-99%",
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock":0
+		}
+	],
+	"pants": [
+		{
+			"name": "Yoga Pants",
+			"image": "/public/img/products/pants/1.jpg",
+			"price": 5,
+			"discount": "-0%",
+			"type": "Fitness",
+			"stock": 1
+		},
+		{
+			"name": "Gray Yogger",
+			"image": "/public/img/products/pants/2.jpg",
+			"price": 10,
+			"discount": "-50%",
+			"type": "Casual",
+			"stock": 1
+		},
+		{
+			"name": "Black Yogger",
+			"image": "/public/img/products/pants/3.jpg",
+			"price": 50,
+			"discount": "-0%",
+			"type": "Casual",
+			"stock": 1
+		},
+		{
+			"name": "Formal Pants",
+			"image": "/public/img/products/pants/4.jpg",
+			"price": 15,
+			"discount": "-0%",
+			"type": "PC/Laptop",
+			"stock": 1
+		},
+		{
+			"name": "Golf Pants",
+			"image": "/public/img/products/pants/5.jpg",
+			"price": 20,
+			"discount": "-0%",
+			"type": "Formal",
+			"stock": 0
+		},
+		{
+			"name": "Woman Jeans",
+			"image": "/public/img/products/pants/6.jpg",
+			"price": 30,
+			"discount": "-0%",
+			"type": "Casual",
+			"stock": 1
+		}
+	],
+	"technology": [
+		{
+			"name": "A amazing Laptop",
+			"image": "/public/img/products/technology/laptop.png",
+			"price": 520,
+			"discount": "-0%",
+			"type": "PC/Laptop",
+			"stock": 1
+		},
+		{
+			"name": "Camera with WIFI",
+			"image": "/public/img/products/technology/bb.jpg",
+			"price": 50,
+			"discount": "-10%",
+			"type": "Photographic",
+			"stock": 1
+		},
+		{
+			"name": "Redmi Gaming",
+			"image": "/public/img/products/technology/cell.jpg",
+			"price": 125,
+			"newRelease": true,
+			"discount": "-0%",
+			"type": "Phone",
+			"stock": 1
+		},
+		{
+			"name": "Redmi A7",
+			"image": "/public/img/products/technology/cell2.jpg",
+			"price": 100,
+			"newRelease": true,
+			"discount": "-0%",
+			"type": "Formal",
+			"stock": 1
+		},
+		{
+			"name": "Smart TV",
+			"image": "/public/img/products/technology/tv.jpg",
+			"price": 1500,
+			"discount": "-0%",
+			"type": "Television",
+			"stock": 0
+		},
+		{
+			"name": "Microwave",
+			"image": "/public/img/products/technology/mw.jpg",
+			"price": 650,
+			"discount": "-0%",
+			"type": "Home",
+			"stock": 1
+		}
+	]
+}

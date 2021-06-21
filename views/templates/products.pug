@@ -1,0 +1,77 @@
+<!-- PRODUCTOS -->
+
+div(class="container px-5")
+	div(class="row")
+		div(class="col-12")
+			h1(class="text-center mb-4") 
+				strong Products
+
+	div(class="row justify-content-center" id="productsArea")
+
+		<!-- POR CADA PRODUCTO -->
+		each i in camisas
+			<!-- UNA COLUMNA PARA CADA PRODUCTO -->
+			div(class="col mb-4 mx-0")
+				<!-- CARTA -->
+				div(class="card pt-2 shadow-sm border-0 rounded-lg" style="width:18em;")
+					<!--  TIPO DE PRODUCTO O SI ES NUEVO (BADGE) -->
+					div(
+					style="background-color:white;"
+					class="card-header mt-2 mb-0 py-0 border-0"
+					)
+					<!-- SI ES UN PRODUCTO NUEVO SE LE COLOCA EL BADGE-->
+					<!-- SINO EL TIPO DE PRODUCTO -->
+					if i.newRelease
+						p(class="badge badge-success mx-auto shadow-sm") New Release
+					else
+						p(class="badge badge-dark mx-auto shadow-sm")= i.type
+
+					<!-- LA IMAGEN DEL PRODUCTO -->
+					a(class="text-center" href="#")
+						img(
+						class="card-img-top px-3 pt-2" alt="Card Image"
+						src= i.image
+						style="height:11em;width:12em"
+						)
+					<!-- NOMBRE DEL PRODUCTO -->
+					strong(class="my-3 text-center")
+						a(class="text-body" href="#")= i.name
+
+					<!-- FOOTER DE LA CARD -->
+					div(
+					class="container card-footer pb-0"
+					style="background-color:whitesmoke;"
+					)
+						<!-- PRECIO Y DESCUENTO (SI HAY) -->
+						p(
+						class="d-inline float-left"
+						)
+							i(class="fas fa-dollar-sign" style="font-size:120%;")
+							strong(style="font-size:135%;")= i.price
+
+						if i.discount != "-0%"
+							span(
+							class="badge badge-pill badge-danger align-bottom mt-2 ml-1"
+							)= i.discount
+						<!-- SI NO HAY STOCK SE LE DA UN TOOLTIP -->
+						<!-- SINO, SE LE DA UN BOTÓN NORMAL -->
+						if i.stock == 0
+							span(
+							tabindex="0"
+							data-toggle="tooltip" 
+							title="Actualmente no contamos con este producto"
+							class="d-inline-block float-right"
+							)
+								button(
+								style="pointer-events: none;"
+								class="btn btn-outline-dark disabled"
+								type="button"
+								)
+									i(class="fas fa-cart-plus")
+						else
+							a(
+							class="btn btn-outline-dark float-right"
+							)
+								i(class="fas fa-cart-plus")
+
+			<!-- FIN PRODUCTOS -->

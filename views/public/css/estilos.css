@@ -1,0 +1,18 @@
+body {
+	background-color: #f2f2f2;
+}
+.tabs {
+	background-color: whitesmoke;
+}
+#catsGirl{
+	position: absolute;
+	z-index: 2;
+}
+#laptopGirlCol {
+	position: relative;
+	z-index: 1;
+}
+#textoGirl {
+	margin-top: 50px;
+	margin-left: 650px;
+}
