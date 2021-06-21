@@ -1,5 +1,5 @@
 /node_modules
 
-/views/libs
+/views/libs/
 
 .env
