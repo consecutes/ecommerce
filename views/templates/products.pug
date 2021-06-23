@@ -8,39 +8,38 @@ div(class="container px-5")
 
 	div(class="row justify-content-center" id="productsArea")
 
-		<!-- POR CADA PRODUCTO -->
+		<!-- FOR EACH PRODUCT (SHIRTS FIRST) -->
 		each i in camisas
-			<!-- UNA COLUMNA PARA CADA PRODUCTO -->
+			<!-- A COLUMN TO EACH PRODUCT -->
 			div(class="col mb-4 mx-0")
-				<!-- CARTA -->
+				<!-- CARD -->
 				div(class="card pt-2 shadow-sm border-0 rounded-lg")
-					<!--  TIPO DE PRODUCTO O SI ES NUEVO (BADGE) -->
+					<!-- CARD HEADER  -->
 					div(
 					class="card-header mt-2 mb-0 py-0 border-0"
 					)
-					<!-- SI ES UN PRODUCTO NUEVO SE LE COLOCA EL BADGE-->
-					<!-- SINO EL TIPO DE PRODUCTO -->
+					<!-- PRODUCT TYPE OR NEW RELEASE BADGE-->
 					if i.newRelease
 						p(class="badge badge-success mx-auto shadow-sm") New Release
 					else
 						p(class="badge badge-dark mx-auto shadow-sm")= i.type
 
-					<!-- LA IMAGEN DEL PRODUCTO -->
+					<!-- PRODUCT IMG -->
 					a(class="text-center" href="#")
 						img(
 						class="card-img-top px-3 pt-2"
 						alt="Card Image"
 						src= i.image
 						)
-					<!-- NOMBRE DEL PRODUCTO -->
+					<!-- PRODUCT NAME -->
 					strong(class="my-3 text-center")
 						a(class="text-body" href="#")= i.name
 
-					<!-- FOOTER DE LA CARD -->
+					<!-- CARD FOOTER -->
 					div(
 					class="container card-footer pb-0"
 					)
-						<!-- PRECIO Y DESCUENTO (SI HAY) -->
+						<!-- PRICE AND DISCOUNT (IF EXIST) -->
 						p(
 						class="d-inline float-left"
 						)
@@ -51,8 +50,8 @@ div(class="container px-5")
 							span(
 							class="badge badge-pill badge-danger align-bottom mt-2 ml-1"
 							)= i.discount
-						<!-- SI NO HAY STOCK SE LE DA UN TOOLTIP -->
-						<!-- SINO, SE LE DA UN BOTÓN NORMAL -->
+						<!-- TOOLTIP IF OUT OF STOCK -->
+						<!-- ELSE, NORMAL BUTTON -->
 						if i.stock == 0
 							span(
 							tabindex="0"
@@ -74,4 +73,4 @@ div(class="container px-5")
 							)
 								i(class="fas fa-cart-plus")
 
-			<!-- FIN PRODUCTOS -->
+			<!-- END -->
