@@ -7,7 +7,8 @@ const path = require('path');
 app.set('port', 3000 || process.env.PORT); // Puerto
 	// Archivos estáticos
 app.use('/public', express.static(path.join(__dirname, 'views/public')));
-app.use('/libs', express.static(path.join(__dirname, 'views/libs')))
+app.use('/libs', express.static(path.join(__dirname, 'views/libs')));
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')))
 	// Motor de plantillas (PUG)
 app.set("views", path.join(__dirname, '/views/templates'));
 app.set('view engine', 'pug');
