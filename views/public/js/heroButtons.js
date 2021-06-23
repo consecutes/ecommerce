@@ -14,6 +14,9 @@ allHeroBtn.addEventListener("click", () => {
 	cardGenerator(document.getElementById("productsArea"), "shirts")
 
 	productsTittle.innerHTML="<strong>Products</strong>"
+
+	document.getElementById("heroCategoriesList").getElementsByClassName("active")[0].classList.remove("active", "list-group-item-dark");
+	allHeroBtn.classList.add("active", "list-group-item-dark");
 });
 // Shirts button
 shirtsHeroBtn.addEventListener("click", () => {
@@ -21,6 +24,9 @@ shirtsHeroBtn.addEventListener("click", () => {
 	cardGenerator(document.getElementById("productsArea"), "shirts")
 
 	productsTittle.innerHTML="<strong>Shirts</strong>"
+
+	document.getElementById("heroCategoriesList").getElementsByClassName("active")[0].classList.remove("active", "list-group-item-dark");
+	shirtsHeroBtn.classList.add("active", "list-group-item-dark");
 });
 // Pants button
 pantsHeroBtn.addEventListener("click", () => {
@@ -28,6 +34,9 @@ pantsHeroBtn.addEventListener("click", () => {
 	cardGenerator(document.getElementById("productsArea"), "pants")
 
 	productsTittle.innerHTML="<strong>Pants</strong>"
+
+	document.getElementById("heroCategoriesList").getElementsByClassName("active")[0].classList.remove("active", "list-group-item-dark");
+	pantsHeroBtn.classList.add("active", "list-group-item-dark");
 });
 // Tecnology button
 tecnologyHeroBtn.addEventListener("click", () => {
@@ -35,4 +44,7 @@ tecnologyHeroBtn.addEventListener("click", () => {
 	cardGenerator(document.getElementById("productsArea"), "technology")
 
 	productsTittle.innerHTML="<strong>Tecnology</strong>"
+
+	document.getElementById("heroCategoriesList").getElementsByClassName("active")[0].classList.remove("active", "list-group-item-dark");
+	tecnologyHeroBtn.classList.add("active", "list-group-item-dark");
 });
