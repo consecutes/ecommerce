@@ -3,7 +3,7 @@
 div(class="container px-5")
 	div(class="row")
 		div(class="col-12")
-			h1(class="text-center mb-4") 
+			h1(class="text-center mb-4" id="productsTittle") 
 				strong Products
 
 	div(class="row justify-content-center" id="productsArea")
@@ -29,7 +29,8 @@ div(class="container px-5")
 					<!-- LA IMAGEN DEL PRODUCTO -->
 					a(class="text-center" href="#")
 						img(
-						class="card-img-top px-3 pt-2" alt="Card Image"
+						class="card-img-top px-3 pt-2"
+						alt="Card Image"
 						src= i.image
 						style="height:11em;width:12em"
 						)
@@ -66,11 +67,14 @@ div(class="container px-5")
 								style="pointer-events: none;"
 								class="btn btn-outline-dark disabled"
 								type="button"
+								aria-label="addToCardButton"
+								href="#productsArea"
 								)
 									i(class="fas fa-cart-plus")
 						else
 							a(
 							class="btn btn-outline-dark float-right"
+							href="#productsArea"
 							)
 								i(class="fas fa-cart-plus")
 
