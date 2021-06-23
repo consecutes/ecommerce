@@ -1,8 +1,11 @@
+/* Universal styles */
 body {
 	background-color: #f2f2f2;
 }
-.tabs {
-	background-color: whitesmoke;
+
+/* Hero styles */
+#heroContainer{
+	background-color:white;
 }
 #catsGirl{
 	position: absolute;
@@ -15,4 +18,28 @@ body {
 #textoGirl {
 	margin-top: 50px;
 	margin-left: 650px;
+}
+
+/* Products Cards */
+.tabs, .card-footer {
+	background-color: whitesmoke;
+}
+.card {
+	width:18em;
+}
+.card-header {
+	background-color:white;
+}
+.card-img-top {
+	height:11em;
+	width:12em;
+}
+.dollarPrice {
+	font-size:120%;
+}
+.price {
+	font-size:135%;
+}
+.nonStockButton {
+	pointer-events: none;
 }
