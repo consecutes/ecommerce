@@ -27,15 +27,24 @@ const indexVer = (index) => {
 		previousLi.classList.add("disabled");
 		previousPagination.classList.remove("text-body");
 
+		nextLi.classList.remove("disabled");
+		nextPagination.classList.add("text-body");
+
 	}else if(index == 3){
 
 		nextLi.classList.add("disabled");
 		nextPagination.classList.remove("text-body");
 
+		previousLi.classList.remove("disabled");
+		previousPagination.classList.add("text-body");
+
 	}else{
 
 		previousLi.classList.remove("disabled");
 		previousPagination.classList.add("text-body");
+
+		nextLi.classList.remove("disabled");
+		nextPagination.classList.add("text-body");
 
 	};
 
@@ -58,53 +67,54 @@ secondPagination.addEventListener("click", () => {
 	
 	index = 2;
 
-	cardGenerator(productsArea, "technology");
+	cardGenerator(productsArea, "pants");
 	indexVer(index);
 
 });
 
 // Third page
 thirdPagination.addEventListener("click", () => {
-
-
+	
 	index = 3;
 
-	cardGenerator(productsArea, "pants");
+	cardGenerator(productsArea, "technology");
 	indexVer(index);
 
 });
 
-// Pagination
+// Next pagination
 nextPagination.addEventListener("click", () => {
 
 	if(index == 1){
 
-		cardGenerator(productsArea, "technology");
+		cardGenerator(productsArea, "pants");
 		index++;
 		indexVer(index);
 
+
 	}else if(index == 2){
 
+		cardGenerator(productsArea, "technology");
 		index++;
-		cardGenerator(productsArea, "pants");
 		indexVer(index);
 
 	};
 
 });
 
+// Previous pagination
 previousPagination.addEventListener("click", () => {
 
 	if(index == 2){
 
 		cardGenerator(productsArea, "shirts");
-		index--;
+		index-=1;
 		indexVer(index);
 
 	}else if(index == 3){
 
-		cardGenerator(productsArea, "technology");
-		index--;
+		cardGenerator(productsArea, "pants");
+		index-=1;
 		indexVer(index);
 
 	};
