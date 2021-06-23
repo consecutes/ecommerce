@@ -1,18 +1,18 @@
-div(class="container")
+div(class="container" id="pagination")
 	div(class="row")
 		div(class="col-12")
 			nav(class="mt-4")
 				ul(class="pagination justify-content-center" )
 
-					<!-- BOTÓN PREVIO -->
+					<!-- PREVIOUS BUTTON -->
 					li(class="page-item" id="previousLi")
 						a(class="page-link text-body" id="previousPage" href="#productsArea")
 							span
 								i(class="fas fa-arrow-left")
 							span(class="sr-only") Previous
 
-					<!-- NUMEROS -->
-					li(class="page-item active")
+					<!-- PAGES -->
+					li(class="page-item")
 						a(class="page-link text-body" id="firstPage" href="#productsArea")
 							strong 1
 					li(class="page-item")
@@ -21,9 +21,9 @@ div(class="container")
 					li(class="page-item")
 						a(class="page-link text-body" id="thirdPage" href="#productsArea")
 							strong 3
-					<!-- FIN NUMEROS -->
+					<!-- PAGES END -->
 
-					<!-- BOTÓN SIGUIENTE -->
+					<!-- NEXT BUTTON -->
 					li(class="page-item" id="nextLi")
 						a(class="page-link text-body" id="nextPage" href="#productsArea")
 							span
