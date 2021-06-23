@@ -7,8 +7,7 @@ html(lang="en")
 		title E-commerce
 
 		<!-- BOOTSTRAP CSS -->
-		link(rel="stylesheet", href="/node_modules/bootstrap/dist/css/bootstrap.css")
-		script(href="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")
+		link(rel="stylesheet", href="/libs/css/bootstrap.min.css")
 
 		<!-- FONT AWESOME -->
 		script(defer src="/node_modules/@fortawesome/fontawesome-free/js/brands.js")
@@ -17,7 +16,7 @@ html(lang="en")
 
 		<!-- CSS -->
 		link(rel="stylesheet", href="/public/css/estilos.css")
-
+		
 	body
 
 		include navbar.pug
@@ -34,10 +33,10 @@ html(lang="en")
 
 		include footer.pug
 
+		<!-- BOOTSTRAP JAVASCRIPT -->
+		script(href="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")
+
 		<!-- JAVASCRIPT -->
 		script(type="module" src="/public/js/pagination.js")
 
 		script(type="module" src="/public/js/heroButtons.js")
-
-		<!-- BOOTSTRAP JAVASCRIPT -->
-		script(href="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")
