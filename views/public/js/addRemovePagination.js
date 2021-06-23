@@ -1,5 +1,6 @@
 const paginationDiv = document.getElementById("pagination")
 let html;
+
 export const addPagination = () => {
 	paginationDiv.classList.remove("d-none")
 };
