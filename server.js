@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, '/views/templates'));
 app.set('view engine', 'pug');
 // Routing
 app.use(require('./src/routes/index'));
-app.use(require('./src/routes/pruebas'));
+app.use(require('./src/routes/test'));
 app.use(require('./src/routes/api'));
 // Iniciando servidor
 app.listen(app.get('port'), () => {
