@@ -6,10 +6,18 @@ html {
 body {
 	background-color: #f2f2f2;
 }
-
+/* Navbar styles Roboto Black*/
+.roundedFont {
+	font-weight: bold;
+	font-style: italic;
+}
+.navText {
+	font-size: 110%;
+	font-weight: bold;
+}
 /* Hero styles */
 #heroContainer{
-	background-color:white;
+	background-color: white;
 }
 #catsGirl{
 	position: absolute;
