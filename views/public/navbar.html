@@ -1,6 +1,6 @@
-<div class="container-fluid border-bottom shadow bg-primary px-3">
+<div class="container-fluid border-bottom shadow bg-primary">
 	
-	<nav class="navbar navbar-expand-lg navbar-secondary navbar-dark py-3">
+	<nav class="container navbar navbar-expand-lg navbar-secondary navbar-dark ">
 		
 		<!-- BRAND LOGO -->
 		<a href="#" class="navbar-brand">
@@ -13,10 +13,10 @@
 
 		<!-- SEARCH INPUT -->
 		<ul class="navbar-nav mx-auto">
-			<li class="nav-item mr-auto">
+			<li class="nav-item">
 
 				<div class="input-group shadow">	
-					<input type="text" class="form-control border-0" placeholder="Find that amazing naruto shirt" style="width: 450px;">
+					<input type="text" class="form-control border-0" placeholder="An amazing shirt" style="width:325px">
 
 					<div class="input-group-append">
 						<button
@@ -35,7 +35,7 @@
 		</ul>
 
 		<!-- NAVBAR ITEMS -->
-		<ul class="navbar-nav ml-auto">
+		<ul class="navbar-nav">
 			<!-- 24/7 HELP -->
 			<li class="nav-item my-auto">
 				<a href="#" class="nav-link active d-inline px-0 py-0 mr-1 text-warning">
@@ -60,29 +60,28 @@
 			</li>
 
 			<!-- your account "dropdown" -->
-			<li class="nav-item my-auto">
-				<a href="#" class="nav-link active d-inline px-0 py-0 mr-1 text-warning">
-					<i class="fas fa-user"></i>
+			<li class="nav-item my-auto dropdown">
+				<a 
+					href="#" 
+					class="nav-link active d-inline px-0 py-0 mr-1 text-warning"
+		        	id="navbarDropdown" 
+		       		data-toggle="dropdown" 
+				>
+					<i class="fas fa-user d-inline"></i>
+					<p class="d-inline text-white">
+						<strong>your account</strong>
+					</p>
+					<i class="fas fa-chevron-down d-inline"></i>
 				</a>
-				<a href="#" class="nav-link active d-inline px-0 py-0 navText">
-					your account
-				</a>
-				<a href="#" class="nav-link d-inline px-0 py-0">
-					<i class="fas fa-chevron-down"></i>
-				</a>
-			</li>
 
-			<li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Dropdown
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		          <a class="dropdown-item" href="#">Action</a>
 		          <a class="dropdown-item" href="#">Another action</a>
 		          <div class="dropdown-divider"></div>
 		          <a class="dropdown-item" href="#">Something else here</a>
 		        </div>
-		      </li>
+			</li>
 		</ul>
 		<!-- END NAVBAR ITEMS -->
 	</nav>
