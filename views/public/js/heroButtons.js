@@ -15,12 +15,12 @@ allHeroBtn.addEventListener("click", () => {
 	addPagination();
 	cardGenerator(document.getElementById("productsArea"), "shirts")
 
-	productsTittle.innerHTML="<strong>Products</strong>"
+	productsTittle.innerHTML="<strong>Our products</strong>"
 
 	activeItem = document.getElementById("heroCategoriesList").getElementsByClassName("active")[0];
 
-	activeItem.classList.remove("active", "list-group-item-dark");
-	allHeroBtn.classList.add("active", "list-group-item-dark");
+	activeItem.classList.remove("active", "list-group-item-secondary");
+	allHeroBtn.classList.add("active", "list-group-item-secondary");
 });
 // Shirts button
 shirtsHeroBtn.addEventListener("click", () => {
@@ -31,8 +31,8 @@ shirtsHeroBtn.addEventListener("click", () => {
 
 	activeItem = document.getElementById("heroCategoriesList").getElementsByClassName("active")[0];
 
-	activeItem.classList.remove("active", "list-group-item-dark");
-	shirtsHeroBtn.classList.add("active", "list-group-item-dark");
+	activeItem.classList.remove("active", "list-group-item-secondary");
+	shirtsHeroBtn.classList.add("active", "list-group-item-secondary");
 });
 // Pants button
 pantsHeroBtn.addEventListener("click", () => {
@@ -43,8 +43,8 @@ pantsHeroBtn.addEventListener("click", () => {
 
 	activeItem = document.getElementById("heroCategoriesList").getElementsByClassName("active")[0];
 
-	activeItem.classList.remove("active", "list-group-item-dark");
-	pantsHeroBtn.classList.add("active", "list-group-item-dark");
+	activeItem.classList.remove("active", "list-group-item-secondary");
+	pantsHeroBtn.classList.add("active", "list-group-item-secondary");
 });
 // Tecnology button
 tecnologyHeroBtn.addEventListener("click", () => {
@@ -55,6 +55,6 @@ tecnologyHeroBtn.addEventListener("click", () => {
 
 	activeItem = document.getElementById("heroCategoriesList").getElementsByClassName("active")[0];
 	
-	activeItem.classList.remove("active", "list-group-item-dark");
-	tecnologyHeroBtn.classList.add("active", "list-group-item-dark");
+	activeItem.classList.remove("active", "list-group-item-secondary");
+	tecnologyHeroBtn.classList.add("active", "list-group-item-secondary");
 });

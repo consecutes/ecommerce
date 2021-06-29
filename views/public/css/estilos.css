@@ -6,13 +6,16 @@ html {
 body {
 	background-color: #f2f2f2;
 }
+h1 strong, h3 strong {
+	color: #383D41;
+}
 /* Navbar styles Roboto Black*/
-.roundedFont {
-	font-weight: bold;
-	font-style: italic;
+.yourBrandLogo {
+	font-weight: bold !important;
+	font-style: italic !important;
 }
 .navText {
-	font-size: 110%;
+	font-size: 105%;
 	font-weight: bold;
 }
 /* Hero styles */
@@ -20,8 +23,12 @@ body {
 	background-color: white;
 }
 #catsGirl{
+	margin-top: 80px;
 	position: absolute;
 	z-index: 2;
+}
+#catsGirl div a span {
+	font-style: italic;
 }
 #laptopGirlCol {
 	position: relative;
