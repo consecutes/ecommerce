@@ -27,9 +27,6 @@ h1 strong, h3 strong {
 	position: absolute;
 	z-index: 2;
 }
-#catsGirl div a span {
-	font-style: italic;
-}
 #laptopGirlCol {
 	position: relative;
 	padding-bottom: 0px;
