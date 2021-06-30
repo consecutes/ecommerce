@@ -2,7 +2,6 @@ import {cardGenerator} from './cards.js';
 
 // Page Index
 let index = 1;
-
 // Pages
 const firstPagination = document.getElementById("firstPage");
 const secondPagination = document.getElementById("secondPage");
@@ -120,3 +119,17 @@ previousPagination.addEventListener("click", () => {
 	};
 
 });
+
+// Removing cards margin
+let cards = productsArea.getElementsByClassName("col");
+let lastCardIndex = cards.length - 1;
+let lastCard = cards[lastCardIndex];
+
+lastCard.classList.remove("mb-5");
+cards[lastCardIndex - 1].classList.remove("mb-5");
+cards[lastCardIndex - 2].classList.remove("mb-5");
+
+// Add a minor margin
+lastCard.classList.add("mb-3");
+cards[lastCardIndex - 1].classList.add("mb-3");
+cards[lastCardIndex - 2].classList.add("mb-3");

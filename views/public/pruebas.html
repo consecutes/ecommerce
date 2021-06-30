@@ -6,24 +6,68 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Documento de Pruebas</title>
 	<!-- BOOTSTRAP CSS -->
-	<link rel="stylesheet", href="/bootstrap/css/bootstrap.min.css">	
+	<link rel="stylesheet", href="/node_modules/bootstrap/dist/css/bootstrap.min.css">	
 	<!-- CSS PROPIO-->
 	<link rel="stylesheet", href="/public/css/test.css">
-	<!-- FONT AWESOME-->
-	<script defer src="/libs/fontawesome/js/brands.js"></script>
-  	<script defer src="/libs/fontawesome/js/solid.js"></script>
-  	<script defer src="/libs/fontawesome/js/fontawesome.js"></script>
   	<!-- ANIMACIONES -->
-  	<link rel="stylesheet" href="/libs/animate.min.css">
+  	<link rel="stylesheet" href="/public/css/animate.min.css">
 </head>
 <body>
 	<!-- CUERPO -->
-	<h1 class="animate__animated animate__bounce animate__slower animate__repeat-3">Hola</h1>
-	<!-- CIERRE DEL CUERPO -->
-	<!-- JAVASCRIPT -->
+	<div class="container">
+		<div class="row">
+			
+			<!-- CATEGORIES COLUMN -->
+			<div class="col-3" id="catsGirl">
+
+				<div class="list-group w-75 animacion" id="heroCategoriesList">
+					
+					<!-- ALL PRODUCTS -->
+					<a
+						class="list-group-item lead list-group-item-action list-group-item-secondary active uno"
+						id="allHeroBtn"
+						href="#productsTittle"
+					>
+						<span class="">All</span>
+					</a>
+
+					<!-- SHIRTS-->
+					<a
+						class="list-group-item lead list-group-item-action dos"
+						id="shirtsHeroBtn"
+						href="#productsTittle"
+					>
+						<span>Shirts</span>
+					</a>
+
+					<!-- PANTS -->
+					<a
+						class="list-group-item lead list-group-item-action tres"
+						id="pantsHeroBtn"
+						href="#productsTittle"
+					>
+						<span>Pants</span>
+					</a>
+
+					<!-- Tecnology -->
+					<a
+						class="list-group-item lead list-group-item-action cuatro"
+						id="tecnologyHeroBtn"
+						href="#productsTittle"
+					>
+						<span>Tecnology</span>
+					</a>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		
+	</script>
 	<!-- BOOTSTRAP JAVASCRIPT -->
-	<script href="/libs/bootstrap/jquery" />
-	<script href="/libs/bootstrap/popper.min.js" />
-	<script href="/libs/bootstrap/js/bootstrap.min.js" />
+	<script type="module" src="./js/bootstrap.js"></script>
 </body>
 </html>

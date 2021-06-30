@@ -1,6 +1,5 @@
 <!-- PRODUCTOS -->
-
-div(class="container px-5")
+div(class="container px-5 bg-transparent")
 	div(class="row")
 		div(class="col-12")
 			h1(class="text-center mb-4" id="productsTittle") 
@@ -11,7 +10,7 @@ div(class="container px-5")
 		<!-- FOR EACH PRODUCT (SHIRTS FIRST) -->
 		each i in camisas
 			<!-- A COLUMN TO EACH PRODUCT -->
-			div(class="col mb-4 mx-0")
+			div(class="col mb-5 mx-0")
 				<!-- CARD -->
 				div(class="card pt-2 shadow-sm border-0 rounded-lg")
 					<!-- CARD HEADER  -->
@@ -20,36 +19,55 @@ div(class="container px-5")
 					)
 					<!-- PRODUCT TYPE OR NEW RELEASE BADGE-->
 					if i.newRelease
-						p(class="badge badge-success mx-auto shadow-sm") New Release
+						a(href="#productsArea" class="mx-auto py-0 badge badge-info text-center")
+							p(class="shadow-sm my-1 mx-1") New Release
 					else
-						p(class="badge badge-dark mx-auto shadow-sm")= i.type
+						a(href="#productsArea" class="mx-auto py-0 badge badge-dark text-center")
+							p(class="shadow-sm my-1 mx-1")= i.type
 
 					<!-- PRODUCT IMG -->
 					a(class="text-center" href="#")
 						img(
-						class="card-img-top px-3 pt-2"
+						class="card-img-top px-3 pt-3"
 						alt="Card Image"
 						src= i.image
 						)
 					<!-- PRODUCT NAME -->
-					strong(class="my-3 text-center")
-						a(class="text-body" href="#")= i.name
+					if i.stock == 0
+						strong(class="my-3 text-center")
+							a(class="text-body text-muted text-decoration-none")= i.name
+					else
+						strong(class="my-3 text-center")
+							a(class="text-body text-info" href="#")= i.name
 
 					<!-- CARD FOOTER -->
 					div(
-					class="container card-footer pb-0"
+					class="container card-footer px-4"
 					)
 						<!-- PRICE AND DISCOUNT (IF EXIST) -->
-						p(
-						class="d-inline float-left"
-						)
-							i(class="fas fa-dollar-sign mr-1 dollarPrice")
-							strong(class="price")= i.price
+						- var nuevoPrecio = (i.price * i.discount) / 100
+							- var procentajeDescuento = "-"+ (100-i.discount) +"%"
+						if i.discount
+							p(class="d-inline text-info mr-2")
+								i(class="fas fa-dollar-sign dollarPrice")
+								strong(class="price")= nuevoPrecio
 
-						if i.discount != "-0%"
-							span(
-							class="badge badge-pill badge-danger align-bottom mt-2 ml-1"
-							)= i.discount
+							p(
+								class="d-inline text-muted noPrice"
+								data-toggle="tooltip"
+								title= procentajeDescuento
+							)
+								s
+									strong
+										span $
+										span= i.price
+						else
+							p(
+								class="d-inline float-left mb-0"
+							)
+								i(class="fas fa-dollar-sign dollarPrice")
+								strong(class="price")= i.price
+
 						<!-- TOOLTIP IF OUT OF STOCK -->
 						<!-- ELSE, NORMAL BUTTON -->
 						if i.stock == 0
@@ -60,7 +78,7 @@ div(class="container px-5")
 							class="d-inline-block float-right"
 							)
 								button(
-								class="btn btn-outline-dark disabled nonStockButton"
+								class="btn btn-outline-info disabled nonStockButton"
 								type="button"
 								aria-label="addToCardButton"
 								href="#productsArea"
@@ -68,7 +86,8 @@ div(class="container px-5")
 									i(class="fas fa-cart-plus")
 						else
 							a(
-							class="btn btn-outline-dark float-right"
+							class="btn btn-info float-right"
+							id="addToCart"
 							href="#productsArea"
 							)
 								i(class="fas fa-cart-plus")
