@@ -1,6 +1,5 @@
-#allHeroBtn, #shirtsHeroBtn, #pantsHeroBtn, #tecnologyHeroBtn{
-	display: inline-block;
-}
+/* Hero */
+
 #allHeroBtn {
 	animation: fadeInLeft;
 	animation-duration: 1s;
@@ -17,8 +16,9 @@
 	animation: fadeInLeft;
 	animation-duration: 4s;
 }
-.animacion {
-	animation: fadeIn;
-	animation-duration: 1s;
+
+/* Tests */
+#heroHeader {
+	animation: backInRight;
+	animation-duration: 2s;
 }
-/*  fadeInLeft*/
