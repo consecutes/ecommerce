@@ -27,7 +27,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				if (element.stock == 0) {
 					productName = `
 						<strong class="my-3 text-center">
-							<a class="text-body text-muted text-decoration-none">${element.name}</a>
+							<a href="#" class="text-body text-muted text-decoration-none">${element.name}</a>
 						</strong>	
 					`;
 				}else{
@@ -81,7 +81,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 					>
 
 						<button
-							class="btn rounded-circle btn-outline-info disabled nonStockButton"
+							class="btn btn-outline-info disabled nonStockButton"
 							type="button"
 							aria-label="addToCardButton"
 							href="#productsArea"
@@ -94,7 +94,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				} else {
 					addToCartButton = `
 					<a
-						class="btn rounded-circle btn-info float-right"
+						class="btn btn-info float-right"
 						href="#productsArea"
 					>
 						<i class="fas fa-cart-plus"></i>
