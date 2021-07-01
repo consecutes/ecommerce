@@ -1,5 +1,4 @@
 /* Hero */
-
 #allHeroBtn {
 	animation: fadeInLeft;
 	animation-duration: 1s;
@@ -16,9 +15,20 @@
 	animation: fadeInLeft;
 	animation-duration: 4s;
 }
-
-/* Tests */
 #heroHeader {
 	animation: backInRight;
+	animation-duration: 2s;
+}
+/* Hero IMG */
+#heroImg {
+	animation: fadeIn;
+	animation-duration: 1s;
+}
+#heroTittle {
+	animation: fadeIn;
+	animation-duration: 1s;
+}
+#heroParraph {
+	animation: fadeIn;
 	animation-duration: 2s;
 }

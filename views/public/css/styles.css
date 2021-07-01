@@ -72,3 +72,7 @@ h1 strong, h3 strong {
 .price {
 	font-size:135%;
 }
+/* Footer */
+#backgroundFooter {
+	background-color: gray;
+}
