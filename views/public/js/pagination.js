@@ -18,6 +18,21 @@ const nextLi = document.getElementById("nextLi");
 // Where the products are
 const productsArea = document.getElementById("productsArea");
 
+// Cards
+let cards = productsArea.getElementsByClassName("col");
+
+const removingMargin = (cards) => {
+	let lastCardIndex = cards.length - 1;
+	// Removing cards margin
+	cards[lastCardIndex].classList.remove("mb-5");
+	cards[lastCardIndex - 1].classList.remove("mb-5");
+	cards[lastCardIndex - 2].classList.remove("mb-5");
+	// Add a minor margin
+	cards[lastCardIndex].classList.add("mb-3");
+	cards[lastCardIndex - 1].classList.add("mb-3");
+	cards[lastCardIndex - 2].classList.add("mb-3");
+};
+
 // Index verification
 const indexVer = (index) => {
 
@@ -55,17 +70,15 @@ indexVer(index);
 firstPagination.addEventListener("click", () => {
 	
 	index = 1;
-
 	cardGenerator(productsArea, "shirts");
 	indexVer(index);
-	
+
 });
 
 // Second page
 secondPagination.addEventListener("click", () => {
 	
 	index = 2;
-
 	cardGenerator(productsArea, "pants");
 	indexVer(index);
 
@@ -75,7 +88,6 @@ secondPagination.addEventListener("click", () => {
 thirdPagination.addEventListener("click", () => {
 	
 	index = 3;
-
 	cardGenerator(productsArea, "technology");
 	indexVer(index);
 
@@ -89,7 +101,6 @@ nextPagination.addEventListener("click", () => {
 		cardGenerator(productsArea, "pants");
 		index++;
 		indexVer(index);
-
 
 	}else if(index == 2){
 
@@ -120,16 +131,5 @@ previousPagination.addEventListener("click", () => {
 
 });
 
-// Removing cards margin
-let cards = productsArea.getElementsByClassName("col");
-let lastCardIndex = cards.length - 1;
-let lastCard = cards[lastCardIndex];
-
-lastCard.classList.remove("mb-5");
-cards[lastCardIndex - 1].classList.remove("mb-5");
-cards[lastCardIndex - 2].classList.remove("mb-5");
-
-// Add a minor margin
-lastCard.classList.add("mb-3");
-cards[lastCardIndex - 1].classList.add("mb-3");
-cards[lastCardIndex - 2].classList.add("mb-3");
+// Removing margin
+removingMargin(cards);

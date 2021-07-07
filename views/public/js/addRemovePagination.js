@@ -1,10 +1,9 @@
-const paginationDiv = document.getElementById("pagination")
-let html;
+const paginationDiv = document.getElementById("pagination");
 
 export const addPagination = () => {
-	paginationDiv.classList.remove("d-none")
+	paginationDiv.classList.remove("d-none");
 };
 
 export const removePagination = () => {
-	paginationDiv.classList.add("d-none")
-}
+	paginationDiv.classList.add("d-none");
+};

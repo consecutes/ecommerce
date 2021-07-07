@@ -1,4 +1,4 @@
-let badge, html, productName, addToCartButton, precioFinal, price, procentajeDescuento;
+let badge, html, productName, addToCartButton, precioFinal, price, procentajeDescuento, longitud, contador, margin;
 
 export const cardGenerator = (productsArea, productCategory) => {
 	
@@ -6,8 +6,16 @@ export const cardGenerator = (productsArea, productCategory) => {
 		.then((res) => res.json())
 		.then((res) => {
 			html = "";
-
+			contador = 0;
+			longitud = res[`${productCategory}`].length;
+			
 			res[`${productCategory}`].forEach((element) => {
+				contador++;
+				if(contador === longitud - 2 || contador === longitud - 1 || contador == longitud){
+					margin = "mb-3"
+				}else{
+					margin = "mb-5"
+				};
 				// New release or type badge
 				if (element.newRelease) {
 					badge = `
@@ -21,7 +29,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 							<p class="shadow-sm my-1 mx-1">${element.type}</p>
 						</a>
 					`;
-				}
+				};
 
 				// Product name
 				if (element.stock == 0) {
@@ -36,7 +44,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 							<a class="text-body text-info" href="#">${element.name}</a>
 						</strong>
 					`;
-				}
+				};
 				// Price
 				precioFinal = (parseFloat(element.price) * parseFloat(element.discount)) / 100
 				procentajeDescuento = "-"+ (100-element.discount) +"%"
@@ -61,15 +69,15 @@ export const cardGenerator = (productsArea, productCategory) => {
 								</strong>
 							</s>
 						</p>
-					`
+					`;
 				}else{
 					price = `
 						<p class="d-inline float-left mb-0">
 							<i class="fas fa-dollar-sign dollarPrice"></i>
 							<strong class="price">${element.price}</strong>
 						</p>
-					`
-				}
+					`;
+				};
 				// Add to cart button
 				if (element.stock == 0) {
 					addToCartButton = `
@@ -99,12 +107,12 @@ export const cardGenerator = (productsArea, productCategory) => {
 					>
 						<i class="fas fa-cart-plus"></i>
 					</a>`;
-				}
+				};
 
 				html += `
 \n 
 <!-- COLUMN -->
-<div class="col mb-5 mx-0">
+<div class="col ${margin} mx-0">
 	
 	<!-- CARD CLASS -->
 	<div class="card pt-2 shadow-sm border-0 rounded-lg" style="width:18em">
@@ -148,7 +156,6 @@ export const cardGenerator = (productsArea, productCategory) => {
 \n
 `;
 			});
-
 			productsArea.innerHTML = html;
 		});
-}
+};

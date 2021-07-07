@@ -75,7 +75,7 @@
 			"name": "Formal Pants",
 			"image": "/public/img/products/pants/4.jpg",
 			"price": 15,
-			"type": "PC/Laptop",
+			"type": "Formal",
 			"stock": 1
 		},
 		{
@@ -122,7 +122,7 @@
 			"image": "/public/img/products/technology/cell2.jpg",
 			"price": 100,
 			"newRelease": true,
-			"type": "Formal",
+			"type": "Phone",
 			"stock": 1
 		},
 		{
