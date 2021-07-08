@@ -10,7 +10,9 @@ export const cardGenerator = (productsArea, productCategory) => {
 			longitud = res[`${productCategory}`].length;
 			
 			res[`${productCategory}`].forEach((element) => {
+				// For each element, increase the counter
 				contador++;
+				// Margin in the last row
 				if(contador === longitud - 2 || contador === longitud - 1 || contador == longitud){
 					margin = "mb-3"
 				}else{
@@ -30,7 +32,6 @@ export const cardGenerator = (productsArea, productCategory) => {
 						</a>
 					`;
 				};
-
 				// Product name
 				if (element.stock == 0) {
 					productName = `
@@ -50,7 +51,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				procentajeDescuento = "-"+ (100-element.discount) +"%"
 				if(element.discount){
 					price = `
-						<p class="d-inline text-info mr-2">
+						<p class="d-inline text-info mr-1">
 							<i class="fas fa-dollar-sign dollarPrice"></i>
 							<strong class="price">
 								${precioFinal}
@@ -108,7 +109,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 						<i class="fas fa-cart-plus"></i>
 					</a>`;
 				};
-
+				// gathering all the elements in one string
 				html += `
 \n 
 <!-- COLUMN -->
