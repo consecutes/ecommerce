@@ -4,7 +4,7 @@ html(lang="en")
 		<!-- CONFIG -->
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		title E-commerce
+		title Your company
 
 		<!-- BOOTSTRAP CSS -->
 		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -26,27 +26,25 @@ html(lang="en")
 		<link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
 
 	body
+		div(id="all")
+			include ../public/navbar.html
 
-		include ../public/navbar.html
+			include ../public/hero.html
 
-		include ../public/hero.html
+			br/
 
-		br/
+			include products.pug
 
-		include products.pug
+			include pagination.pug
+			
+			br/
 
-		include pagination.pug
-		
-		br/
-
-		include ../public/footer.html
+			include ../public/footer.html
 
 		<!-- BOOTSTRAP JAVASCRIPT -->
 		script(type="module" src="/public/js/bootstrap.js")
 
 		<!-- JAVASCRIPT -->
-		script(type="module" src="/public/js/pagination.js")
-
-		script(type="module" src="/public/js/heroButtons.js")
-
 		script(type="module" src="/public/js/scripts.js")
+		script(type="module" src="/public/js/pagination.js")
+		script(type="module" src="/public/js/heroButtons.js")
