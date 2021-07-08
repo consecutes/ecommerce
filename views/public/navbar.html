@@ -26,8 +26,8 @@
 		<ul class="navbar-nav mx-auto my-3">
 			<li class="nav-item">
 
-				<div class="input-group shadow">	
-					<input type="text" class="form-control border-0" placeholder="An amazing shirt" style="width:325px">
+				<div class="input-group shadow-sm">	
+					<input type="text" class="form-control border-0" placeholder="An amazing shirt" style="width:325px" autofocus>
 
 					<div class="input-group-append">
 						<button
@@ -62,24 +62,13 @@
 
 				<a 
 					href="#" 
-					class="nav-link d-inline px-0 py-0 mr-1"
-		        	id="navbarDropdown" 
-		       		data-toggle="dropdown" 
+					class="nav-link d-inline px-0 py-0 mr-1" 
 				>
 					<i class="fas fa-shopping-cart d-inline text-warning fa-lg"></i>
 					<p class="d-inline text-white ml-1">
 						<strong>your cart</strong>
 					</p>
-					<i class="fas fa-chevron-down d-inline fa-sm"></i>
 				</a>
-
-
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Action</a>
-		          <a class="dropdown-item" href="#">Another action</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a>
-		        </div>
 
 			</li>
 
@@ -100,11 +89,30 @@
 				</a>
 
 
-				<div class="dropdown-menu" aria-labelledby="yourAccountDropdown">
-		          <a class="dropdown-item" href="#">SI</a>
-		          <a class="dropdown-item" href="#">Another action</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a>
+				<div
+					class="dropdown-menu py-0"
+					aria-labelledby="yourAccountDropdown"
+				>
+					<div
+			          	class="card rounded-0 mx-0"
+			          	style="width: 15em;"
+		        	>
+			        	<img
+							src="/public/img/gray.png"
+							class="rounded-circle w-50 mt-3"
+							alt="gray"
+							style="margin-left:60px;"
+						>
+		          	<div class="card-body border-bottom pt-3">
+		          		<h5 class="card-title text-center mb-0">
+		          			<strong>Pablo Hernandez</strong>
+		          		</h5>
+		          	</div>
+		          </div>
+
+		          <a href="#" class="dropdown-item my-2">Account Settings</a>
+		          <a href="#" class="dropdown-item my-2">Log out</a>
+
 		        </div>
 
 			</li>

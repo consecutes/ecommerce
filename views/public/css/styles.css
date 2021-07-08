@@ -2,14 +2,15 @@
 html {
 	scroll-behavior: smooth
 }
-
 body {
 	background-color: #f2f2f2;
 }
 h1 strong, h3 strong {
 	color: #383D41;
 }
-
+.form-control:focus {
+	box-shadow: none;
+}
 /* Navbar styles Roboto Black*/
 #navbarTop {
 	background-color: whitesmoke;
@@ -40,7 +41,7 @@ h1 strong, h3 strong {
 }
 #textoGirl {
 	margin-top: 110px;
-	margin-left: 600px;
+	margin-left: 550px;
 }
 
 /* Products Cards */
