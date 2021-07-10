@@ -52,10 +52,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				if(element.discount){
 					price = `
 						<p class="d-inline text-info mr-1">
-							<i class="fas fa-dollar-sign dollarPrice"></i>
-							<strong class="price">
-								${precioFinal}
-							</strong>
+							<i class="fas fa-dollar-sign dollarPrice"></i><strong class="price">${precioFinal}</strong>
 						</p>
 
 						<p 
@@ -74,8 +71,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				}else{
 					price = `
 						<p class="d-inline float-left mb-0">
-							<i class="fas fa-dollar-sign dollarPrice"></i>
-							<strong class="price">${element.price}</strong>
+							<i class="fas fa-dollar-sign dollarPrice"></i><strong class="price">${element.price}</strong>
 						</p>
 					`;
 				};
