@@ -32,10 +32,17 @@ html(lang="en")
 			include ../public/hero.html
 
 			br/
+			<!-- LOADER -->
+			div(id="loader" class="container")
+				div(class="row")
+					div(class="col-12 my-5 d-flex justify-content-center")
+						div(class="spinner-border" role="status")
+							span(class="sr-only") Loading
 
-			include products.pug
+			div(class="d-none" id="productsAndPagination")
+				include products.pug
 
-			include pagination.pug
+				include pagination.pug
 			
 			br/
 
