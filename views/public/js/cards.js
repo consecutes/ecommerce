@@ -154,5 +154,19 @@ export const cardGenerator = (productsArea, productCategory) => {
 `;
 			});
 			productsArea.innerHTML = html;
+		}).catch(e => {
+			productsArea.innerHTML = `
+				<div class="col-12 my-4 text-center">
+					<h1>
+						<strong>Ha ocurrido un error, intentalo más tarde</strong>
+					</h1>
+					<h1 class="display-4" style="font-size:130%;">
+						<strong>${e}</strong>
+					</h1>
+				</div>
+			`;
+			document.getElementById("productsTittle").classList.add("d-none");
+			document.getElementById("productsTittle").classList.remove("d-block");
+			document.getElementById("pagination").classList.add("d-none");
 		});
 };

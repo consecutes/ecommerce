@@ -28,6 +28,9 @@ h1 strong, h3 strong {
 #heroContainer{
 	background-color: white;
 }
+#heroRow {
+	margin-left:100px;
+}
 #catsGirl{
 	margin-top: 80px;
 	position: absolute;
@@ -45,6 +48,10 @@ h1 strong, h3 strong {
 }
 
 /* Products Cards */
+#productsArea .col .card {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
 .card-footer {
 	background-color: whitesmoke;
 }

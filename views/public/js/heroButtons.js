@@ -13,6 +13,8 @@ let activeItem = document.getElementById("heroCategoriesList").getElementsByClas
 // All products button
 allHeroBtn.addEventListener("click", () => {
 	addPagination();
+	document.getElementById("productsTittle").classList.add("d-block");
+	document.getElementById("productsTittle").classList.remove("d-none");
 	cardGenerator(document.getElementById("productsArea"), "shirts")
 
 	productsTittle.innerHTML="<strong>Our products</strong>"
@@ -25,6 +27,8 @@ allHeroBtn.addEventListener("click", () => {
 // Shirts button
 shirtsHeroBtn.addEventListener("click", () => {
 	removePagination();
+	document.getElementById("productsTittle").classList.add("d-block");
+	document.getElementById("productsTittle").classList.remove("d-none");
 	cardGenerator(document.getElementById("productsArea"), "shirts")
 
 	productsTittle.innerHTML="<strong>Shirts</strong>"
@@ -37,6 +41,8 @@ shirtsHeroBtn.addEventListener("click", () => {
 // Pants button
 pantsHeroBtn.addEventListener("click", () => {
 	removePagination();
+	document.getElementById("productsTittle").classList.add("d-block");
+	document.getElementById("productsTittle").classList.remove("d-none");
 	cardGenerator(document.getElementById("productsArea"), "pants")
 
 	productsTittle.innerHTML="<strong>Pants</strong>"
@@ -49,6 +55,8 @@ pantsHeroBtn.addEventListener("click", () => {
 // Tecnology button
 tecnologyHeroBtn.addEventListener("click", () => {
 	removePagination();
+	document.getElementById("productsTittle").classList.add("d-block");
+	document.getElementById("productsTittle").classList.remove("d-none");
 	cardGenerator(document.getElementById("productsArea"), "technology")
 
 	productsTittle.innerHTML="<strong>Tecnology</strong>"
