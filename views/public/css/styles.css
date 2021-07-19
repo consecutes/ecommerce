@@ -82,6 +82,8 @@ h1 strong, h3 strong {
 }
 
 /* Media Queries */
+
+	/* XS, SM */
 @media only screen and (max-width: 768px) {
 	#productsArea .col .card {
 		margin-left: auto !important;
@@ -100,12 +102,7 @@ h1 strong, h3 strong {
 	}
 }
 
-@media only screen and (min-width: 768px) {
-	#navbarSupportedContent {
-		margin-left: 11em;
-	}
-}
-
+	/* >SM */
 @media only screen and (min-width: 500px) {
 	#searchItem {
 		width: auto !important;
@@ -116,20 +113,34 @@ h1 strong, h3 strong {
 	}
 }
 
+	/* >MD */
 @media only screen and (min-width: 768px) {
+	#navbarSupportedContent {
+		margin-left: 11em;
+	}
 	.yourBrandLogo {
 		font-size: 170%;
 		margin-bottom: 0px;
 	}
 }
 
+	/* >LG */
 @media only screen and (min-width: 992px) {
 	#searchItem {
-		margin-left: 5em !important;
+		margin-left: 4px !important;
+		margin-right: 2em !important;
 		width: 90%;
 	}
 	#navbarSupportedContent {
 		margin-left: auto !important;
 		margin-right: auto !important;
+	}
+}
+
+	/* >LG */
+@media only screen and (min-width: 1200px) {
+	#searchItem {
+		margin-left: 4em !important;
+		width: 100% !important;
 	}
 }
