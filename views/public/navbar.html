@@ -4,45 +4,30 @@
 		
 		<!-- BRAND LOGO -->
 		<a href="#" class="navbar-brand d-inline">
-			
 			<h2 class="yourBrandLogo">
 				Your Company
 			</h2>
-
 		</a>
+
 		<!-- COLLAPSER -->
-		<button class="navbar-toggler d-inline d-md-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button
+			class="navbar-toggler d-inline d-md-none"
+			type="button"
+			data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		
 		<!-- SEARCH INPUT -->
-		<ul class="navbar-nav d-none d-md-inline-block my-3">
-			<li class="nav-item">
+		<ul class="navbar-nav mx-auto d-block my-3" id="searchNav">
+			<li class="nav-item" id="searchItem">
 
-				<div class="input-group shadow-sm">	
-					<input type="text" class="form-control border-0" placeholder="An amazing shirt" style="width:325px" autofocus>
-
-					<div class="input-group-append">
-						<button
-							class="btn btn-outline btn-link bg-white border-0 input-group-text"
-							aria-label="searchButton"
-							alt="Link"
-						>
-							<a href="#productsTittle">
-								<i class="fas fa-search text-info"></i>
-							</a>
-						</button>
-					</div>
-				</div>
-
-			</li>
-		</ul>
-		
-		<ul class="navbar-nav mx-auto d-block d-md-none my-3">
-			<li class="nav-item">
-
-				<div class="input-group shadow-sm">	
-					<input type="text" class="form-control border-0" placeholder="An amazing shirt" style="width:350px" autofocus>
+				<div class="input-group shadow-sm rounded-pill">	
+					<input type="text" class="form-control border-0 w-75 " placeholder="An amazing shirt" autofocus>
 
 					<div class="input-group-append">
 						<button
@@ -60,25 +45,36 @@
 			</li>
 		</ul>
 
-		
+		<!-- COLLAPSER -->
+		<button
+			class="navbar-toggler d-none d-md-inline d-lg-none"
+			type="button"
+			data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
 		<!-- NAVBAR ITEMS -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-md-auto">
+			<ul class="navbar-nav d-md-block my-md-3 mx-md-auto ml-lg-auto">
 				<!-- 24/7 HELP -->
-				<li class="nav-item mt-2 my-3 my-md-auto">
-					<a href="#" class="nav-link active d-inline px-0 py-0 mr-1 text-warning">
-						<i class="fas fa-phone fa-lg"></i>
-					</a>
-					<a href="#" class="nav-link active d-inline px-0 py-0 navText">
-						24/7 help
+				<li class="nav-item mt-2 my-3">
+					<a href="#" class="nav-link d-inline active px-0 py-0 mr-1 text-warning">
+						<i class="fas fa-phone fa-lg d-none d-sm-inline"></i>
+						<p class="d-inline text-white ml-1">
+							<strong>24/7 help</strong>
+						</p>
 					</a>
 
 					<!-- your cart -->
 					<a 
 						href="#" 
-						class="nav-link d-inline px-md-0 py-md-0 mx-5 mr-md-1" 
+						class="nav-link d-inline px-md-0 py-md-0 mx-3 mx-md-3" 
 					>
-						<i class="fas fa-shopping-cart d-inline text-warning fa-lg"></i>
+						<i class="fas fa-shopping-cart d-none d-sm-inline text-warning fa-lg"></i>
 						<p class="d-inline text-white ml-1">
 							<strong>your cart</strong>
 						</p>
@@ -89,7 +85,7 @@
 						href="#" 
 						class="nav-link d-inline px-md-0 py-md-0" 
 					>
-						<i class="fas fa-user d-inline text-warning fa-lg"></i>
+						<i class="fas fa-user d-none d-sm-inline text-warning fa-lg"></i>
 						<p class="d-inline text-white ml-1">
 							<strong>account</strong>
 						</p>

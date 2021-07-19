@@ -48,10 +48,6 @@ h1 strong, h3 strong {
 }
 
 /* Products Cards */
-#productsArea .col .card {
-	margin-left: auto !important;
-	margin-right: auto !important;
-}
 .card-footer {
 	background-color: whitesmoke;
 }
@@ -83,4 +79,57 @@ h1 strong, h3 strong {
 /* Footer */
 #backgroundFooter {
 	background-color: gray;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+	#productsArea .col .card {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.yourBrandLogo {
+		font-size: 140%;
+		margin-bottom: 0px;
+	}
+	.navbar-nav {
+		font-size: 100%;
+	}
+	.nav-item {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#navbarSupportedContent {
+		margin-left: 11em;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	#searchItem {
+		width: auto !important;
+	}
+	.yourBrandLogo {
+		font-size: 160%;
+		margin-bottom: 0px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.yourBrandLogo {
+		font-size: 170%;
+		margin-bottom: 0px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#searchItem {
+		margin-left: 5em !important;
+		width: 90%;
+	}
+	#navbarSupportedContent {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
 }
