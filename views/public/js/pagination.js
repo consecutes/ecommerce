@@ -19,7 +19,7 @@ const nextLi = document.getElementById("nextLi");
 const productsArea = document.getElementById("productsArea");
 
 // Cards
-let cards = productsArea.getElementsByClassName("col");
+let cards = productsArea.getElementsByClassName("col-12");
 
 const removingMargin = (cards) => {
 	let lastCardIndex = cards.length - 1;
