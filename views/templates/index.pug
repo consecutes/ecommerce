@@ -1,37 +1,14 @@
 doctype html
 html(lang="en")
 	head
-		<!-- CONFIG -->
-		link(rel="icon" type="img/png" href="/public/img/favicon.png")
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		title Your company
-
-		<!-- BOOTSTRAP CSS -->
-		<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-		<!-- FONT AWESOME -->
-		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/brands.js">		
-		</script>
-		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/solid.js">
-		</script>
-
-		<script defer src="/node_modules/@fortawesome/fontawesome-free/js/fontawesome.js">
-		</script>
-
+		include head.pug
 		<!-- CSS PROPIO-->
-		<link rel="stylesheet", href="/public/css/styles.css">
-
-		<!-- ANIMACIONES -->
-		<link rel="stylesheet", href="/public/css/animations.css">
-		<link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
-
+		link(rel="stylesheet", href="/public/css/styles.css")
+		link(rel="stylesheet", href="/public/css/animations.css")
 	body
 		div(id="all")
 			include ../public/navbar.html
-
 			include ../public/hero.html
-
 			br/
 			<!-- LOADER -->
 			div(id="loader" class="container")
@@ -39,14 +16,10 @@ html(lang="en")
 					div(class="col-12 my-5 d-flex justify-content-center")
 						div(class="spinner-border" role="status")
 							span(class="sr-only") Loading
-
 			div(class="d-none" id="productsAndPagination")
 				include products.pug
-
 				include pagination.pug
-			
 			br/
-
 			include ../public/footer.html
 
 		<!-- BOOTSTRAP JAVASCRIPT -->
