@@ -32,3 +32,12 @@
 	animation: fadeIn;
 	animation-duration: 2s;
 }
+/* Login/Register */
+.fadeOut {
+	animation:  fadeOut;
+	animation-duration: 1s;
+}
+.fadeIn {
+	animation:  fadeIn;
+	animation-duration: 1s;
+}
