@@ -27,16 +27,20 @@ html(lang="en")
 						div(class="col-12")
 							input(
 								type="email",
+								id="emailLoginInput"
 								placeholder="Email",
 								name="email"
 								class="form-control mb-3 pl-3 mx-auto font-italic"
+								required
 							)
 							input(
-								type="text",
+								type="password",
+								id="passwordLoginInput"
 								placeholder="Password",
 								name="password"
 								maxlength="12"
 								class="form-control mb-3 pl-3 mx-auto font-italic"
+								required
 							)
 						div(class="col-12 mb-3", class="text-center")
 							a(href="#")
@@ -128,9 +132,8 @@ html(lang="en")
 								input(
 									type="submit"
 									class="btn btn-danger rounded-pill mx-auto",
-									id="iniciarSesionBoton"
+									id="registrarseBoton"
 									value="¡Registrarme ahora!"
-									style="font-size:100%"
 								)
 					div(class="col-12 mt-4 text-center")
 						p(class="text-muted") Si ya tienes una cuenta  

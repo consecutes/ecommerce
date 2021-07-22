@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 
 router.get('/test', (req, res) => {
-	res.send('/public/pruebas')
+	res.json(req.cookies)
 });
 
 module.exports = router;

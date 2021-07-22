@@ -1,0 +1,12 @@
+{
+	"default@default.com": {
+		"firstName": "Default Name",
+		"lastName": "Default Last Name",
+		"password": "default"
+	},
+	"christopherglood@gmail.com": {
+		"firstName": "Christopher",
+		"lastName": "Glood",
+		"password": "qcxdjw"
+	}
+}

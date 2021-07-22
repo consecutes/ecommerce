@@ -3,13 +3,15 @@ const express = require('express');
 const app = express();
 // Módulos
 const path = require('path');
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 // Configuración
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(cookieParser());
 app.set('port', 3000 || process.env.PORT); // Puerto
 	// Archivos estáticos
 app.use('/public', express.static(path.join(__dirname, 'views/public')));
-app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')))
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 	// Motor de plantillas (PUG)
 app.set("views", path.join(__dirname, '/views/templates'));
 app.set('view engine', 'pug');
