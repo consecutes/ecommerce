@@ -75,7 +75,7 @@ html(lang="en")
 										placeholder="Primer Nombre",
 										name="firstName"
 										class="form-control mb-3 d-inline pl-3 font-italic"
-										id="firstName"
+										id="firstNameInput"
 										required
 									)
 									input(
@@ -83,32 +83,35 @@ html(lang="en")
 										placeholder="Apellido",
 										name="lastName"
 										class="form-control mb-3 float-right pl-3 d-inline font-italic"
-										id="lastName"
+										id="lastNameInput"
 										required
 									)
 							div(class="row")
 								div(class="col-12")
 									input(
-										type="text",
+										type="email",
 										placeholder="Correo Eléctronico",
+										id="emailSignUpInput"
 										name="email"
-										class="form-control mb-3 float-right pl-3 font-italic"
+										class="form-control passwordInput mb-3 float-right pl-3 font-italic"
 										required
 									)
 							div(class="row")
 								div(class="col-12")
 									input(
-										type="text",
+										type="password",
 										placeholder="Contraseña",
 										name="password"
+										id="passwordSignUpInput"
 										maxlength="12"
-										class="form-control mb-3 float-right pl-3 font-italic"
+										class="form-control passwordInput mb-3 float-right pl-3 font-italic"
 										required
 									)
 							div(class="row")
 								div(class="col-12")
 									input(
-										type="text",
+										type="password",
+										id="repeatPasswordInput"
 										placeholder="Confirma contraseña",
 										maxlength="12"
 										class="form-control mb-3 float-right pl-3 font-italic"
@@ -141,3 +144,4 @@ html(lang="en")
 								strong inicia sesión
 
 		script(type="module", src="/public/js/login.js")
+		script(type="module", src="/public/js/signUp.js")

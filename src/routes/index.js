@@ -3,16 +3,21 @@ const router = Router();
 
 const productos = require('../storage/products.json');
 const accounts = require("../storage/accounts.json");
-let mensaje;
+let usuario;
 router.get("/", (req, res) => {
 	if(!req.cookies.account){
-		console.log("Registrate")
+		usuario = null;
 	}else{
-		console.log(req.cookies.account)
-	}
+		usuario = {
+			"email": `${req.cookies.account}`,
+			"firstName": accounts[`${req.cookies.account}`].firstName,
+			"lastName": accounts[`${req.cookies.account}`].lastName
+		};	
+	};
+	console.log(usuario)
 	res.render('index', {
 		camisas: productos.shirts,
-		mensaje: mensaje
+		usuario: usuario
 	});
 });
 

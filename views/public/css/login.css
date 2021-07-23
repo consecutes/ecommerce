@@ -41,10 +41,10 @@ body {
 	font-family: Franklin Gothic Medium;
 }
 
-#firstName, #lastName {
+#firstNameInput, #lastNameInput {
 	width: 45% !important;
 }
-#firstName {
+#firstNameInput {
 	padding-left: 0px;
 }
 #signUp, #login{
