@@ -4,7 +4,11 @@ const loginLink = document.getElementById("loginLink");
 const square = document.getElementsByClassName('container');
 const fadeOut = document.getElementsByClassName("fadeOut");
 
-document.getElementById("iniciarSesionBoton").setAttribute("disabled", "");
+const emailInput = document.getElementById("emailLoginInput");
+const loginButton = document.getElementById("iniciarSesionBoton");
+const passwordInput = document.getElementById("passwordLoginInput");
+
+loginButton.setAttribute("disabled", "");
 
 signLink.addEventListener("click", () => {
 	square[0].classList.remove("fadeIn");
@@ -37,36 +41,36 @@ loginLink.addEventListener("click", () => {
 // Login Validation
 
 // Email verification
-document.getElementById("emailLoginInput").addEventListener("input", () => {
-	let correo = document.getElementById("emailLoginInput").value;
+emailInput.addEventListener("input", () => {
+	let correo = emailInput.value;
 	setTimeout(() => {
 		if(!correo.endsWith(".com")){
-			document.getElementById("iniciarSesionBoton").setAttribute("disabled", "");
-			document.getElementById("emailLoginInput").classList.add("is-invalid");
+			loginButton.setAttribute("disabled", "");
+			emailInput.classList.add("is-invalid");
 		}else if(correo.indexOf("@") == -1){
-			document.getElementById("iniciarSesionBoton").setAttribute("disabled", "");
-			document.getElementById("emailLoginInput").classList.add("is-invalid");
+			loginButton.setAttribute("disabled", "");
+			emailInput.classList.add("is-invalid");
 		}else{
-			document.getElementById("iniciarSesionBoton").removeAttribute("disabled");
-			document.getElementById("emailLoginInput").classList.remove("is-invalid");
-			document.getElementById("emailLoginInput").classList.add("is-valid");
+			loginButton.removeAttribute("disabled");
+			emailInput.classList.remove("is-invalid");
+			emailInput.classList.add("is-valid");
 		};
 	}, 250);
 });
 
 // Password verification
-document.getElementById("passwordLoginInput").addEventListener("input", () => {
-	if(document.getElementById("passwordLoginInput").value.length <= 4){
+passwordInput.addEventListener("input", () => {
+	if(passwordInput.value.length <= 4){
 		setTimeout(() => {
-			document.getElementById("iniciarSesionBoton").setAttribute("disabled", "");
-			document.getElementById("passwordLoginInput").classList.remove("is-valid");
-			document.getElementById("passwordLoginInput").classList.add("is-invalid");
+			loginButton.setAttribute("disabled", "");
+			passwordInput.classList.remove("is-valid");
+			passwordInput.classList.add("is-invalid");
 		}, 250);
 	}else{
 		setTimeout(() => {
-			document.getElementById("iniciarSesionBoton").removeAttribute("disabled");
-			document.getElementById("passwordLoginInput").classList.remove("is-invalid");
-			document.getElementById("passwordLoginInput").classList.add("is-valid");
+			loginButton.removeAttribute("disabled");
+			passwordInput.classList.remove("is-invalid");
+			passwordInput.classList.add("is-valid");
 		}, 250);
 	};
 });
