@@ -10,6 +10,11 @@ const passwordInput = document.getElementById("passwordLoginInput");
 
 loginButton.setAttribute("disabled", "");
 
+const validation = {
+	email: false,
+	password: false
+}
+
 signLink.addEventListener("click", () => {
 	square[0].classList.remove("fadeIn");
 	square[0].classList.add("fadeOut");
@@ -45,15 +50,15 @@ emailInput.addEventListener("input", () => {
 	let correo = emailInput.value;
 	setTimeout(() => {
 		if(!correo.endsWith(".com")){
-			loginButton.setAttribute("disabled", "");
 			emailInput.classList.add("is-invalid");
+			validation["email"] = false;
 		}else if(correo.indexOf("@") == -1){
-			loginButton.setAttribute("disabled", "");
 			emailInput.classList.add("is-invalid");
+			validation["email"] = false;
 		}else{
-			loginButton.removeAttribute("disabled");
 			emailInput.classList.remove("is-invalid");
 			emailInput.classList.add("is-valid");
+			validation["email"] = true;
 		};
 	}, 250);
 });
@@ -62,15 +67,25 @@ emailInput.addEventListener("input", () => {
 passwordInput.addEventListener("input", () => {
 	if(passwordInput.value.length <= 4){
 		setTimeout(() => {
-			loginButton.setAttribute("disabled", "");
+			validation["password"] = false;
 			passwordInput.classList.remove("is-valid");
 			passwordInput.classList.add("is-invalid");
 		}, 250);
 	}else{
 		setTimeout(() => {
-			loginButton.removeAttribute("disabled");
+			validation["password"] = true;
 			passwordInput.classList.remove("is-invalid");
 			passwordInput.classList.add("is-valid");
 		}, 250);
 	};
 });
+
+setInterval(() => {
+	let v = Object.values(validation);
+	let y = v.filter(value => value === false);
+	if(y.indexOf(false) == -1){
+		loginButton.removeAttribute("disabled");
+	}else{
+		loginButton.setAttribute("disabled", "");
+	};
+}, 500);
