@@ -1,0 +1,101 @@
+doctype html
+html(lang="en")
+	head
+		include head.pug
+		link(rel="stylesheet", href="/public/css/styles.css")
+	body
+		- if(usuario) clasesLogged = "d-none";
+		- if(usuario) clasesAccount = "navbar navbar-expand-lg navbar-dark bg-danger px-5";
+		- if(!usuario) clasesAccount = "d-none";
+		- if(!usuario) clasesLogged = "navbar navbar-expand-lg navbar-dark bg-danger px-5";
+		
+		nav(class=clasesLogged)
+			a(class="navbar-brand" href="#")
+				h2(class="yourBrandLogo") Your company
+			button(
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			)
+				span(class="navbar-toggler-icon")
+
+			div(class="navbar-nav my-3 mx-5" id="searchItem")
+				div(class="input-group")
+					input(
+						type="text"
+						class="form-control border-0"
+						placeholder="An amazing shirt"
+					)
+					div(class="input-group-append")
+						button(class="btn btn-light input-group-text")
+							i(class="fas fa-search text-black")
+
+			div(class="collapse navbar-collapse" id="navbarSupportedContent")
+				ul(class="navbar-nav ml-auto")
+					li(class="nav-item mx-0")
+						a(class="nav-link" href="#")
+							i(
+								class="fas fa-phone text-dark fa-lg d-inline mr-2"
+							)
+							strong(class="text-black-50") 24/7 help
+					li(class="nav-item")
+						a(class="nav-link" href="#")
+							i(
+								class="fas fa-shopping-cart d-inline text-dark fa-lg mr-2"
+							)
+							strong(class="text-black-50") Your cart
+					li(class="nav-item active")
+						a(class="nav-link" href="/login")
+							strong Create an account/Login
+
+		nav(class=clasesAccount)
+			a(class="navbar-brand" href="#")
+				h2(class="yourBrandLogo") Your company
+			button(
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			)
+				span(class="navbar-toggler-icon")
+
+			div(class="navbar-nav my-3 mx-5" id="searchItem")
+				div(class="input-group")
+					input(
+						type="text"
+						class="form-control border-0"
+						placeholder="An amazing shirt"
+					)
+					div(class="input-group-append")
+						button(class="btn btn-light input-group-text")
+							i(class="fas fa-search text-black")
+
+			div(class="collapse navbar-collapse" id="navbarSupportedContent")
+				ul(class="navbar-nav ml-auto")
+					li(class="nav-item mx-0")
+						a(class="nav-link" href="#")
+							i(
+								class="fas fa-phone text-dark fa-lg d-inline mr-2"
+							)
+							strong(class="text-black-50") 24/7 help
+					li(class="nav-item")
+						a(class="nav-link" href="#")
+							i(
+								class="fas fa-shopping-cart d-inline text-dark fa-lg mr-2"
+							)
+							strong(class="text-black-50") Your cart
+					li(class="nav-item active")
+						a(class="nav-link" href="/login")
+							i(
+								class="fas fa-user d-inline text-dark fa-lg mr-2"
+							)
+							strong Your account
+
+		script(type="module" src="/public/js/bootstrap.js")

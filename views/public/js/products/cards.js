@@ -21,7 +21,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				// New release or type badge
 				if (element.newRelease) {
 					badge = `
-						<a href="#productsArea" class="mx-auto py-0 badge badge-info text-center">
+						<a href="#productsArea" class="mx-auto py-0 badge badge-danger text-center">
 							<p class="shadow-sm my-1 mx-1">New Release</p>
 						</a>
 					`;
@@ -42,7 +42,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				}else{
 					productName = `
 						<strong class="my-3 text-center">
-							<a class="text-body text-info" href="#">${element.name}</a>
+							<a class="text-body text-danger" href="#">${element.name}</a>
 						</strong>
 					`;
 				};
@@ -51,7 +51,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				procentajeDescuento = "-"+ (100-element.discount) +"%"
 				if(element.discount){
 					price = `
-						<p class="d-inline text-info mr-1">
+						<p class="d-inline text-danger mr-1">
 							<i class="fas fa-dollar-sign dollarPrice"></i><strong class="price">${precioFinal}</strong>
 						</p>
 
@@ -86,7 +86,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 					>
 
 						<button
-							class="btn btn-outline-info disabled nonStockButton"
+							class="btn btn-outline-danger disabled nonStockButton"
 							type="button"
 							aria-label="addToCardButton"
 							href="#productsArea"
@@ -99,7 +99,7 @@ export const cardGenerator = (productsArea, productCategory) => {
 				} else {
 					addToCartButton = `
 					<a
-						class="btn btn-info float-right"
+						class="btn btn-danger float-right"
 						href="#productsArea"
 					>
 						<i class="fas fa-cart-plus"></i>
