@@ -14,7 +14,6 @@ router.get("/", (req, res) => {
 			"lastName": accounts[`${req.cookies.account}`].lastName
 		};	
 	};
-	console.log(usuario)
 	res.render('index', {
 		camisas: productos.shirts,
 		usuario: usuario

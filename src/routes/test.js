@@ -1,6 +1,10 @@
 const { Router } = require('express');
 const router = Router();
 
+router.get('/test', (req, res) => {
+	res.render('navbar')
+});
+
 router.get('/cookies', (req, res) => {
 	res.json(req.cookies);
 });
