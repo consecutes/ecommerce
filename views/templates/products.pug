@@ -8,7 +8,9 @@ div(class="container px-5 bg-transparent")
 	div(class="row justify-content-center" id="productsArea")
 
 		<!-- FOR EACH PRODUCT (SHIRTS FIRST) -->
-		each i in camisas
+		- var n = 0;
+		while n < 6
+			- var i = camisas[n]
 			<!-- A COLUMN TO EACH PRODUCT -->
 			div(class="col-12 col-md-6 col-lg-4 mb-4 mx-md-0")
 				<!-- CARD -->
@@ -91,5 +93,5 @@ div(class="container px-5 bg-transparent")
 							href="#productsArea"
 							)
 								i(class="fas fa-cart-plus")
-
+			- n++;
 			<!-- END -->

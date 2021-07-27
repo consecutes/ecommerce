@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 
 router.get('/test', (req, res) => {
-	res.render('navbar')
+	res.render("test")
 });
 
 router.get('/cookies', (req, res) => {

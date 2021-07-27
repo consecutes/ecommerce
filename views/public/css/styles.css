@@ -15,6 +15,11 @@ h1 strong, h3 strong {
 div .input-group-append button:focus {
 	box-shadow: none;	
 }
+.dropdown-item:active {
+	color: #fff;
+	text-decoration: none;
+	background-color: #dc3545;
+}
 /* Navbar styles */
 #navbarTop {
 	background-color: whitesmoke;

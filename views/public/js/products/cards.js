@@ -1,4 +1,4 @@
-let badge, html, productName, addToCartButton, precioFinal, price, procentajeDescuento, longitud, contador, margin;
+let element, badge, html, productName, addToCartButton, precioFinal, price, procentajeDescuento, longitud, contador, margin;
 
 export const cardGenerator = (productsArea, productCategory) => {
 	
@@ -9,7 +9,8 @@ export const cardGenerator = (productsArea, productCategory) => {
 			contador = 0;
 			longitud = res[`${productCategory}`].length;
 			
-			res[`${productCategory}`].forEach((element) => {
+			while(contador < 6) {
+				element = res[`${productCategory}`][contador]
 				// For each element, increase the counter
 				contador++;
 				// Margin in the last row
@@ -152,9 +153,10 @@ export const cardGenerator = (productsArea, productCategory) => {
 </div>
 \n
 `;
-			});
+			};
 			productsArea.innerHTML = html;
 		}).catch(e => {
+			console.error(e)
 			productsArea.innerHTML = `
 				<div class="col-12 my-4 text-center">
 					<h1>
