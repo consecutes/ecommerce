@@ -8,10 +8,19 @@ body {
 h1 strong, h3 strong {
 	color: #383D41;
 }
+/* Box shadow */
 .form-control:focus {
 	box-shadow: none;
 }
-/* Navbar styles Roboto Black*/
+div .input-group-append button:focus {
+	box-shadow: none;	
+}
+.dropdown-item:active {
+	color: #fff;
+	text-decoration: none;
+	background-color: #dc3545;
+}
+/* Navbar styles */
 #navbarTop {
 	background-color: whitesmoke;
 	padding-right: 130px;
@@ -20,13 +29,12 @@ h1 strong, h3 strong {
 	font-weight: bold !important;
 	font-style: italic !important;
 }
-.navText {
-	font-size: 105%;
-	font-weight: bold;
-}
 /* Hero styles */
 #heroContainer{
 	background-color: white;
+}
+#heroRow {
+	margin-left:100px;
 }
 #catsGirl{
 	margin-top: 80px;
@@ -76,4 +84,70 @@ h1 strong, h3 strong {
 /* Footer */
 #backgroundFooter {
 	background-color: gray;
+}
+
+/* Media Queries */
+
+	/* XS, SM */
+@media only screen and (max-width: 768px) {
+	#productsArea .col-12 .card {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	#searchItem {
+		width: 100% !important;
+	}
+	.yourBrandLogo {
+		font-size: 140%;
+		margin-bottom: 0px;
+	}
+	.navbar-nav {
+		font-size: 100%;
+	}
+	.nav-item {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
+	/* >SM */
+@media only screen and (min-width: 500px) {
+	.yourBrandLogo {
+		font-size: 160%;
+		margin-bottom: 0px;
+	}
+}
+
+	/* >MD */
+@media only screen and (min-width: 768px) {
+	.yourBrandLogo {
+		font-size: 170%;
+		margin-bottom: 0px;
+	}
+}
+
+	/* >LG */
+@media only screen and (min-width: 992px) {
+	#navbarSupportedContent {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	#laptopGirlCol {
+		margin-right: 50px !important;
+	}
+	#heroRow {
+		margin-left: 60px !important;
+	}
+}
+
+	/* >XL */
+@media only screen and (min-width: 1000px) {
+	#textoGirl {
+		display: inline-block !important;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	#searchItem {
+		width: 450px
+	}
 }

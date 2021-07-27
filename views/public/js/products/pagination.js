@@ -19,7 +19,7 @@ const nextLi = document.getElementById("nextLi");
 const productsArea = document.getElementById("productsArea");
 
 // Cards
-let cards = productsArea.getElementsByClassName("col");
+let cards = productsArea.getElementsByClassName("col-12");
 
 const removingMargin = (cards) => {
 	let lastCardIndex = cards.length - 1;
@@ -28,9 +28,9 @@ const removingMargin = (cards) => {
 	cards[lastCardIndex - 1].classList.remove("mb-5");
 	cards[lastCardIndex - 2].classList.remove("mb-5");
 	// Add a minor margin
-	cards[lastCardIndex].classList.add("mb-3");
-	cards[lastCardIndex - 1].classList.add("mb-3");
-	cards[lastCardIndex - 2].classList.add("mb-3");
+	cards[lastCardIndex].classList.add("mb-4");
+	cards[lastCardIndex - 1].classList.add("mb-4");
+	cards[lastCardIndex - 2].classList.add("mb-4");
 };
 
 // Index verification
