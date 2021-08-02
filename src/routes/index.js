@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 		};	
 	};
 	res.render('index', {
-		camisas: productos.shirts,
+		productos: productos,
 		usuario: usuario
 	});
 });

@@ -1,12 +1,11 @@
-import {cardGenerator} from './cards.js';
-
+import { cardsGenerator } from "./topProductsGenerator.js";
 // Page Index
 let index = 1;
 // Pages
-const firstPagination = document.getElementById("firstPage");
-const secondPagination = document.getElementById("secondPage");
-const thirdPagination = document.getElementById("thirdPage");
-const fourthPagination = document.getElementById("fourthPage");
+const firstPagination = document.getElementById("1");
+const secondPagination = document.getElementById("2");
+const thirdPagination = document.getElementById("3");
+const fourthPagination = document.getElementById("4");
 
 // Previos and Next button
 const nextPagination = document.getElementById("nextPage");
@@ -35,100 +34,74 @@ const removingMargin = (cards) => {
 
 // Index verification
 const indexVer = (index) => {
-
-	if(index == 1){
-
+	if (index == 1) {
 		previousLi.classList.add("disabled");
 		previousPagination.classList.remove("text-body");
 
 		nextLi.classList.remove("disabled");
 		nextPagination.classList.add("text-body");
-
-	}else if(index == 3){
-
+	} else if (index == 3) {
 		nextLi.classList.add("disabled");
 		nextPagination.classList.remove("text-body");
 
 		previousLi.classList.remove("disabled");
 		previousPagination.classList.add("text-body");
-
-	}else{
-
+	} else {
 		previousLi.classList.remove("disabled");
 		previousPagination.classList.add("text-body");
 
 		nextLi.classList.remove("disabled");
 		nextPagination.classList.add("text-body");
-
-	};
-
+	}
 };
 
 indexVer(index);
 
 // First page
 firstPagination.addEventListener("click", () => {
-	
 	index = 1;
-	cardGenerator(productsArea, "shirts");
+	cardsGenerator(productsArea, "shirts", true);
 	indexVer(index);
-
 });
 
 // Second page
 secondPagination.addEventListener("click", () => {
-	
 	index = 2;
-	cardGenerator(productsArea, "pants");
+	cardsGenerator(productsArea, "pants", true);
 	indexVer(index);
-
 });
 
 // Third page
 thirdPagination.addEventListener("click", () => {
-	
 	index = 3;
-	cardGenerator(productsArea, "technology");
+	cardsGenerator(productsArea, "technology", true);
 	indexVer(index);
-
 });
 
 // Next pagination
 nextPagination.addEventListener("click", () => {
-
-	if(index == 1){
-
-		cardGenerator(productsArea, "pants");
+	if (index == 1) {
+		cardsGenerator(productsArea, "pants", true);
 		index++;
 		indexVer(index);
-
-	}else if(index == 2){
-
-		cardGenerator(productsArea, "technology");
+	} else if (index == 2) {
+		cardsGenerator(productsArea, "technology", true);
 		index++;
 		indexVer(index);
-
-	};
-
+	}
 });
 
 // Previous pagination
 previousPagination.addEventListener("click", () => {
-
-	if(index == 2){
-
-		cardGenerator(productsArea, "shirts");
-		index-=1;
+	if (index == 2) {
+		cardsGenerator(productsArea, "shirts", true);
+		index -= 1;
 		indexVer(index);
-
-	}else if(index == 3){
-
-		cardGenerator(productsArea, "pants");
-		index-=1;
+	} else if (index == 3) {
+		cardsGenerator(productsArea, "pants", true);
+		index -= 1;
 		indexVer(index);
-
-	};
-
+	}
 });
 
 // Removing margin
