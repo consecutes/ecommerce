@@ -16,8 +16,8 @@ allHeroBtn.addEventListener("click", () => {
 	activeItem = document
 		.getElementById("heroCategoriesList")
 		.getElementsByClassName("active")[0];
-	activeItem.classList.remove("active", "list-group-item-secondary");
-	allHeroBtn.classList.add("active", "list-group-item-secondary");
+	activeItem.classList.remove("active", "list-group-item-dark");
+	allHeroBtn.classList.add("active", "list-group-item-dark");
 
 	productsTittle.innerHTML = "<strong>Top products</strong>";
 });
@@ -26,8 +26,8 @@ shirtsHeroBtn.addEventListener("click", () => {
 	activeItem = document
 		.getElementById("heroCategoriesList")
 		.getElementsByClassName("active")[0];
-	activeItem.classList.remove("active", "list-group-item-secondary");
-	shirtsHeroBtn.classList.add("active", "list-group-item-secondary");
+	activeItem.classList.remove("active", "list-group-item-dark");
+	shirtsHeroBtn.classList.add("active", "list-group-item-dark");
 
 	productsTittle.innerHTML = "<strong>Shirts</strong>";
 });
@@ -36,8 +36,8 @@ pantsHeroBtn.addEventListener("click", () => {
 	activeItem = document
 		.getElementById("heroCategoriesList")
 		.getElementsByClassName("active")[0];
-	activeItem.classList.remove("active", "list-group-item-secondary");
-	pantsHeroBtn.classList.add("active", "list-group-item-secondary");
+	activeItem.classList.remove("active", "list-group-item-dark");
+	pantsHeroBtn.classList.add("active", "list-group-item-dark");
 
 	productsTittle.innerHTML = "<strong>Pants</strong>";
 });
@@ -46,8 +46,8 @@ tecnologyHeroBtn.addEventListener("click", () => {
 	activeItem = document
 		.getElementById("heroCategoriesList")
 		.getElementsByClassName("active")[0];
-	activeItem.classList.remove("active", "list-group-item-secondary");
-	tecnologyHeroBtn.classList.add("active", "list-group-item-secondary");
+	activeItem.classList.remove("active", "list-group-item-dark");
+	tecnologyHeroBtn.classList.add("active", "list-group-item-dark");
 
 	productsTittle.innerHTML = "<strong>Tecnology</strong>";
 });
