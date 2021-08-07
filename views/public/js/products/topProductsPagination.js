@@ -1,4 +1,4 @@
-import { cardsGenerator } from "./topProductsGenerator.js";
+import { topCardsGenerator } from "./topProductsGenerator.js";
 // Page Index
 let index = 1;
 // Pages
@@ -60,32 +60,32 @@ indexVer(index);
 // First page
 firstPagination.addEventListener("click", () => {
 	index = 1;
-	cardsGenerator(productsArea, "shirts", true);
+	topCardsGenerator(productsArea, "shirts", true);
 	indexVer(index);
 });
 
 // Second page
 secondPagination.addEventListener("click", () => {
 	index = 2;
-	cardsGenerator(productsArea, "pants", true);
+	topCardsGenerator(productsArea, "pants", true);
 	indexVer(index);
 });
 
 // Third page
 thirdPagination.addEventListener("click", () => {
 	index = 3;
-	cardsGenerator(productsArea, "technology", true);
+	topCardsGenerator(productsArea, "technology", true);
 	indexVer(index);
 });
 
 // Next pagination
 nextPagination.addEventListener("click", () => {
 	if (index == 1) {
-		cardsGenerator(productsArea, "pants", true);
+		topCardsGenerator(productsArea, "pants", true);
 		index++;
 		indexVer(index);
 	} else if (index == 2) {
-		cardsGenerator(productsArea, "technology", true);
+		topCardsGenerator(productsArea, "technology", true);
 		index++;
 		indexVer(index);
 	}
@@ -94,11 +94,11 @@ nextPagination.addEventListener("click", () => {
 // Previous pagination
 previousPagination.addEventListener("click", () => {
 	if (index == 2) {
-		cardsGenerator(productsArea, "shirts", true);
+		topCardsGenerator(productsArea, "shirts", true);
 		index -= 1;
 		indexVer(index);
 	} else if (index == 3) {
-		cardsGenerator(productsArea, "pants", true);
+		topCardsGenerator(productsArea, "pants", true);
 		index -= 1;
 		indexVer(index);
 	}

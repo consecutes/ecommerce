@@ -6,10 +6,10 @@ let badge,
 	procentajeDescuento;
 let contador, element, cards, html, longitud, margin;
 
-export const cardsGenerator = (productsArea, productCategory, top) => {
+export const topCardsGenerator = (productsArea, productCategory, top) => {
 	fetch("api/products")
-		.then((res) => res.json())
-		.then((res) => {
+		.then(res => res.json())
+		.then(res => {
 			html = "";
 			cards = [];
 			contador = 0;
