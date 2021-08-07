@@ -1,6 +1,59 @@
 {
 	"shirts": [
 		{
+			"name":"Im a Lover",
+			"image":"/public/img/products/shirts/lover.jpg",
+			"price":50,
+			"discount": 5,
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock":2
+		},
+		{
+			"name":"Vintage",
+			"image":"/public/img/products/shirts/vintage.jpg",
+			"price":70,
+			"discount": 50,
+			"type": "T-shirt",
+			"stock":0
+		},
+		{
+			"name":"Tommy Hilfiger",
+			"image":"/public/img/products/shirts/tommy1.jpg",
+			"price":25,
+			"discount": 50,
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock":2
+		},
+		{
+			"name":"Tommy Hilfiger",
+			"image":"/public/img/products/shirts/tommy2.jpg",
+			"price":75,
+			"discount": 15,
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock":2
+		},
+		{
+			"name":"Donald",
+			"image":"/public/img/products/shirts/donald.jpg",
+			"price":150,
+			"discount": 75,
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock":0
+		},
+		{
+			"name":"Daugther",
+			"image":"/public/img/products/shirts/daugther.jpg",
+			"price":100,
+			"discount": 75,
+			"newRelease": true,
+			"type": "T-shirt",
+			"stock":3
+		},
+		{
 			"name": "Rick and Morty",
 			"image": "/public/img/products/shirts/rym.jpg",
 			"price": 35,

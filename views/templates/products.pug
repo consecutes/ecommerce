@@ -3,14 +3,14 @@ div(class="container px-5 bg-transparent")
 	div(class="row")
 		div(class="col-12")
 			h1(class="text-center mb-4" id="productsTittle") 
-				strong Our products
+				strong Top products
 
 	div(class="row justify-content-center" id="productsArea")
 
 		<!-- FOR EACH PRODUCT (SHIRTS FIRST) -->
 		- var n = 0;
 		while n < 6
-			- var i = camisas[n]
+			- var i = productos.shirts[n]
 			<!-- A COLUMN TO EACH PRODUCT -->
 			div(class="col-12 col-md-6 col-lg-4 mb-4 mx-md-0")
 				<!-- CARD -->
@@ -33,11 +33,12 @@ div(class="container px-5 bg-transparent")
 						class="card-img-top px-3 pt-3"
 						alt="Card Image"
 						src= i.image
+						draggable="false"
 						)
 					<!-- PRODUCT NAME -->
 					if i.stock == 0
 						strong(class="my-3 text-center")
-							a(href="#" class="text-body text-muted text-decoration-none")= i.name
+							a(class="text-body text-muted text-decoration-none")= i.name
 					else
 						strong(class="my-3 text-center")
 							a(class="text-body text-danger" href="#")= i.name
